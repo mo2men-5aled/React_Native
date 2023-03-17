@@ -6,38 +6,23 @@ export default function App() {
   var input_Data = "";
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      {show ? <Text>Clicked</Text> : null}
-      <TextInput
-        placeholder="type your name"
-        onChange={(event) => {
-          input_Data = event.target.value;
-          console.log(input_Data);
-        }}
-      />
-      <Button
-        style={(styles.button, { backgroundColor: "red" })}
-        title="Click me"
+      <Text
+        numberOfLines={1}
         onPress={() => {
-          if (!show) {
-            show = true;
-          } else {
-            show = false;
-          }
+          console.log("text clicked");
         }}
       >
-        Click me
-      </Button>
+        Open up App.js to start working on your app to be able to see or edit
+        the code you tyype and when you do any changes expo allows the fast
+        refresh
+      </Text>
+
       <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  Button: {
-    width: 200,
-    backgroundColor: "red",
-  },
   container: {
     flex: 1,
     backgroundColor: "powderblue",
